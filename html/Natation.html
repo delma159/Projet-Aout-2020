@@ -15,6 +15,35 @@
         <a href="SautEnHauteur.html"> Saut en hauteur</a>
     </nav>
 </header>
+<form id="formCourses" action=# onSubmit='return ajouterRecordCourse(this);'>
+    <fieldset>
+        <legend>Enregistrement d'un record</legend>
+        <label for="nom">Nom  : </label>
+        <input id="nom" name="nom" type="text" minlength="1" maxlength="30"
+               placeholder="nom de l'athlète" required>
+        <select id="sexe" name="sexe">
+            <option value="Femme" selected>F</option>
+            <option value="Homme">H</option>
+        </select>
+        <label for="sexe"> sexe</label><br>
+        <label for="pays">Pays d'origine :</label>
+        <input id="pays" name=pays" type="text" minlength="1" maxlength="30"
+               placeholder="Pays d'origine" required> <br>
+        <label for="temps">Temps : </label>
+        <input id="temps" name="" type="number" min="0.001"
+               max="5000" step="0.001" placeholder="temps accompli en secondes" required><br>
 
+
+        <!-- destinataire -->
+        <label for="compétition">Compétition : </label>
+        <input id="compétition" name="compétition" type="text" required
+               minlength="0" maxlength="30" placeholder="Nom de la compétition"><br>
+        <!-- date -->
+        <label for="recordDate">Date du record : </label>
+        <input id="recordDate" name="date" type="date" required><br>
+        <!-- boutons -->
+        <input id="save" type="submit" value="Enregistrer le record">
+    </fieldset>
+</form>
 </body>
 </html>
